@@ -88,10 +88,9 @@ toast({
         </AlertTitle>
         <AlertDescription maxWidth='md'>
           <Text>
-            <Text as='strong'>{values.nombre}</Text> le hemos enviado un email a <Text as='strong'>{values.email}</Text> para confirmar su cuenta. Recuerde revisar la carpeta de SPAM o Correo no deseado en caso de no recibirlo.
-          </Text>
+            <Text as='strong'>{values.nombre}</Text> le hemos enviado un email a <Text as='strong'>{values.email}</Text> 
+          </Text>  
           <Heading fontSize='md' mt={3}>IMPORTANTE</Heading>
-          <Text>Solo con el fin de mostrar los datos del formulario para la presentación de la tarea, el objeto se muestra en un console.log().</Text>
         </AlertDescription>
         <Flex mt={2}>
           <Button colorScheme="green" onClick={() => {
@@ -147,27 +146,27 @@ return(
     <form onSubmit={handleSubmit} noValidate>
 
       <CustomFormControl error={errors.nombre} touched={touched.nombre} 
-                        label='Nombre' type='text' name='nombre'
+                        label='NOMBRE' type='text' name='nombre'
                         placeholder='Ingrese su nombre' handleChange={handleChange}
                         handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.nombre}/>
 
       <CustomFormControl error={errors.apellido} touched={touched.apellido} 
-                        label='Apellido' type='text' name='apellido'
+                        label='APELLIDO' type='text' name='apellido'
                         placeholder='Ingrese su apellido' handleChange={handleChange}
                         handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.apellido}/>
 
       <CustomFormControl error={errors.email} touched={touched.email} 
-                        label='Correo' type='email' name='email'
+                        label='CORREO' type='email' name='email'
                         placeholder='Ingrese su correo' handleChange={handleChange}
                         handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.email}/>
 
       <CustomFormControl error={errors.tel} touched={touched.tel} 
-                        label='Teléfono' type='tel' name='tel'
+                        label='TELEFONO' type='tel' name='tel'
                         placeholder='Ingrese su teléfono' handleChange={handleChange}
                         handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.tel}/>
 
       <CustomFormControlPass error={errors.pass} touched={touched.pass} 
-                            label='Contraseña' name='pass' submitted={submitted}
+                            label='CONTRASEÑA' name='pass' submitted={submitted}
                             placeholder='Ingrese una contraseña' handleChange={handleChange}
                             handleBlur={handleBlur} isSubmitting={isSubmitting} value={values.pass}/>
 
@@ -187,8 +186,8 @@ return(
         <motion.div whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
           <Button type='submit' isLoading={isSubmitting} size='lg' 
                   bg='#112132' color='#aaccee'
-                  _hover={{ bg:'#aaccee', color:'#112132'}}
-                  loadingText='Procesando'>Crear cuenta</Button>
+                  _hover={{ bg:'#aaccee', color:'#dc3545'}}
+                  loadingText='Procesando'>Crear Perfil</Button>
 
         </motion.div>
       </Box>
